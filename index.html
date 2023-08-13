@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+<!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">-->
+    <link href="./styles.css" rel="stylesheet">
+      <link rel="stylesheet" href="jqueryuicss.css">
+      <script src="./jquery.js"></script>
+      <script src='./jqueryui.js'></script>
+    <title>Scum Trader</title>
+  </head>
+  <body>
+      <div id='editor'>
+          <div class='VendorLine' id='0'>
+              <div class='TraderEditorLine'>
+                  <div class='vendorEditor TraderEditorTitle'>
+                    <select name="salutation" id="salutation">
+                        <option disabled selected>Vendor Type</option>
+                        <option>Armory</option>
+                        <option>General Goods</option>
+                        <option>Hospital</option>
+                        <option>Mechanic</option>
+                        <option>Saloon</option>
+                        <option>Barber</option>
+                    </select>
+                  </div>
+                  <div class='vendorEditor TraderEditorItemName'><input id="tags" value="Item Name"></div>
+                  <div class='vendorEditor TraderEditorPrices'><div class="BuyBtn PriceBtn">Buy <input type="text"></div><div class="SellBtn PriceBtn">Sell <input type="text"></div></div>
+                  <div class='vendorEditor TraderEditorZones'>
+                      <div class='hvrBtn ZoneBtn exclude'>A0</div>
+                      <div class='hvrBtn ZoneBtn exclude'>B4</div>
+                      <div class='hvrBtn ZoneBtn exclude'>C2</div>
+                      <div class='hvrBtn ZoneBtn exclude'>Z3</div>
+                  </div>
+                  <div id='addBtnContainer' class="vendorEditor"><div class='hvrBtn' id='addBtn'>+</div></div>
+              </div>
+          </div>
+          <div class='VendorLine' id='0'>
+              <div id="genBtn" class='hvrBtn'>
+                  Generate Config
+              </div>
+          </div>
+      </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
